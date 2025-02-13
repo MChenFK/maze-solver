@@ -1,4 +1,5 @@
 import time
+import random
 from cell import Cell
 
 class Maze:
@@ -29,6 +30,8 @@ class Maze:
             for j in range(self._num_rows):
                 column.append(Cell(self._win))
             self._cells.append(column)
+        
+        self._break_entrance_and_exit()
 
         for i in range(self._num_cols):
             for j in range(self._num_rows):
@@ -51,3 +54,17 @@ class Maze:
             return
         self._win.redraw()
         time.sleep(0.05)
+
+    def _break_entrance_and_exit(self):
+        rand = random.randint(0, 1)
+        if rand == 0:
+            self._cells[0][0].has_top_wall = False
+        else:
+            self._cells[0][0].has_left_wall = False
+        rand = random.randint(0, 1)
+        if rand == 0:
+            self._cells[self._num_cols - 1][self._num_rows - 1].has_bottom_wall = False
+        else:
+            self._cells[self._num_cols - 1][self._num_rows - 1].has_right_wall = False
+
+        
