@@ -1,5 +1,7 @@
 import time
 import random
+
+from constants import *
 from cell import Cell
 
 class Maze:
@@ -53,7 +55,7 @@ class Maze:
         if self._win is None:
             return
         self._win.redraw()
-        time.sleep(0.05)
+        time.sleep(ANIMATE_SLEEP)
 
     def _break_entrance_and_exit(self):
         rand = random.randint(0, 1)

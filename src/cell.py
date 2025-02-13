@@ -1,3 +1,4 @@
+from constants import *
 from graphics import Line, Point
 
 class Cell:
@@ -23,30 +24,30 @@ class Cell:
         self._y2 = y2
 
         if self.has_left_wall:
-            fill_color = "black"
+            fill_color = MAZE_WALL_COLOR
         else:
-            fill_color = "white"
+            fill_color = BACKGROUND_COLOR
         line = Line(Point(x1, y1), Point(x1, y2))
         self._win.draw_line(line, fill_color)
 
         if self.has_right_wall:
-            fill_color = "black"
+            fill_color = MAZE_WALL_COLOR
         else:
-            fill_color = "white"
+            fill_color = BACKGROUND_COLOR
         line = Line(Point(x2, y1), Point(x2, y2))
         self._win.draw_line(line, fill_color)
         
         if self.has_top_wall:
-            fill_color = "black"
+            fill_color = MAZE_WALL_COLOR
         else:
-            fill_color = "white"
+            fill_color = BACKGROUND_COLOR
         line = Line(Point(x1, y1), Point(x2, y1))
         self._win.draw_line(line, fill_color)
         
         if self.has_bottom_wall:
-            fill_color = "black"
+            fill_color = MAZE_WALL_COLOR
         else:
-            fill_color = "white"
+            fill_color = BACKGROUND_COLOR
         line = Line(Point(x1, y2), Point(x2, y2))
         self._win.draw_line(line, fill_color)
         
@@ -61,8 +62,8 @@ class Cell:
         line = Line(center1, center2)
 
         if not undo:
-            line_color = "red"
+            line_color = MOVE_COLOR
         else:
-            line_color = "gray"
+            line_color = UNDO_COLOR
 
         self._win.draw_line(line, line_color)

@@ -1,3 +1,4 @@
+from constants import *
 from tkinter import Tk, BOTH, Canvas
 
 class Window:
@@ -5,7 +6,7 @@ class Window:
         self.__root = Tk()
         self.__root.title("Maze Solver")
         self.__root.protocol("WM_DELETE_WINDOW", self.close)
-        self.__canvas = Canvas(self.__root, bg="white", height=height, width=width)
+        self.__canvas = Canvas(self.__root, bg=BACKGROUND_COLOR, height=height, width=width)
         self.__canvas.pack(fill=BOTH, expand=1)
         self.__running = False
 
@@ -21,7 +22,7 @@ class Window:
     def close(self):
         self.__running = False
 
-    def draw_line(self, line, fill_color="black"):
+    def draw_line(self, line, fill_color=MAZE_WALL_COLOR):
         line.draw(self.__canvas, fill_color)
 
 class Point:
@@ -34,7 +35,7 @@ class Line:
         self.point1 = point1
         self.point2 = point2
 
-    def draw(self, canvas, fill_color="black"):
+    def draw(self, canvas, fill_color=MAZE_WALL_COLOR):
         canvas.create_line(
             self.point1.x, self.point1.y, self.point2.x, self.point2.y, fill=fill_color, width=2
         )

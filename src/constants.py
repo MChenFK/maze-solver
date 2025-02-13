@@ -1,0 +1,6 @@
+MAZE_WALL_COLOR = "black"
+BACKGROUND_COLOR = "white"
+MOVE_COLOR = "red"
+UNDO_COLOR = "gray"
+
+ANIMATE_SLEEP = 0.05
