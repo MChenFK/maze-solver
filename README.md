@@ -9,7 +9,10 @@ GUI maze solver built using Python and Tkinter
 Generates and solves maze using functions from maze.py
 
 ### graphics.py
+Contains classes for the window, points and lines
 
 ### cell.py
+Contains functions to draw cells to window
 
 ### maze.py
+Contains functions to generate and solve the maze
