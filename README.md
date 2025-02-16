@@ -5,6 +5,9 @@ GUI maze solver built using Python and Tkinter
 - Maze is displayed using a Tkinter canvas and update methods to continuously render changes to the walls and solve path
 
 ## src
+### constants.py
+Contains constant values for animation sleep and background / line colors
+
 ### main.py
 Generates and solves maze using functions from maze.py
 
