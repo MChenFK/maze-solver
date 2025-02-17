@@ -19,3 +19,6 @@ Contains functions to draw cells to window
 
 ### maze.py
 Contains functions to generate and solve the maze
+
+### tests.py
+Contains unit tests for creating maze and reseting visited cell flags
