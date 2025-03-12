@@ -6,8 +6,12 @@ GUI maze solver built using Python and Tkinter
 
 ## Steps to use:
 1. Download source
-2. Change dimensions for maze in main.py
-3. Run python3 main.py
+2. Change inputs for maze in main.py
+   - Number of rows
+   - Number of columns
+   - Size of margin around maze
+   - Window x and y
+4. Run python3 main.py
 
 ## src
 ### constants.py
